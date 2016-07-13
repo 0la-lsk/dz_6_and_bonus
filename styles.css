@@ -81,7 +81,7 @@ form .login-img {
 	font-size: 11px;
 	color: #fff;
 }
-header .login input {
+header .login input:not([type="submit"]) {
 	width: 108px;
 	height: 13px;
 	border-radius: 2px;
@@ -95,7 +95,7 @@ header .login input {
 	padding-bottom: 2px;
 	border:1px solid #999;
 }
-header button+span {
+header input[type="submit"]+span {
 	display: inline-block;
 	border-right: 1px solid #fff;
 	height: 10px;
@@ -104,7 +104,7 @@ header button+span {
 	vertical-align: top;
 	margin-top: 4px;
 }
-header button {
+header input[type="submit"] {
 	background: none;
 	border:none;
 	height: 16px;
@@ -554,6 +554,10 @@ aside {
 	margin-left: 3px;
 	margin-right: 4px;
 }
+aside.right-sidebar .top-item {
+	width: 22px;
+	height: 22px;
+}
 .sidebar-top h2, .sidebar-top p {
 	line-height: 25px;
 	text-transform: uppercase;;
@@ -562,6 +566,9 @@ aside {
 	font-family: "Lucida Sans Unicode", Arial, sans-serif;
 	letter-spacing: -0.1px;
 	font-weight: 400;
+}
+aside.right-sidebar .sidebar-top h2 {
+	font-size: 14px;
 }
 .aside-header {
 	width: 150px;
@@ -667,7 +674,7 @@ ul.left-sidebar-list {
 .row-block:last-child {
 	margin-right: 7px;
 }
-.row-block>h3 {
+.row-block>figcaption {
 	margin-top: 18px;
 	line-height: 14px;
 	font-size: 15px;
@@ -680,12 +687,13 @@ ul.left-sidebar-list {
 }
 .row-block p.price {
 	color: #114165;
-	font-family: Arial, sans-serif;
-	font-size: 17px;
+	font-family: 'Arial Bold', sans-serif;
+	font-size: 16px;
 	line-height: 24px;
 	font-style: italic;
-	font-weight: bold;
-	letter-spacing: -0.2px;
+	font-weight: 800;
+	letter-spacing: -0.1px;
+	margin-left: 8px;
 }
 .row-block p.price span {
 	font-size: 12px;
@@ -734,15 +742,39 @@ ul.left-sidebar-list {
 .right-aside-submit:hover {
 	color: #fff;
 }
-figure {
-	padding: 40px 0 23px 0;
+.adv-items {
+	padding: 40px 0 25px 0;
 	text-align: center;
 }
-figure a {
-	margin-right: 8px;
+.adv-items a {
+	margin-left: 4px;
+	margin-right: 4px;
 }
-figure a>img {
+.adv-items a>img {
 	vertical-align: middle;
+}
+.adv-items a:nth-child(2)>img {
+	margin-top: -8px;
+}
+.adv-items a:nth-child(3)>img {
+	margin-right: 2px;
+}
+.adv-items a:nth-child(4)>img {
+	margin-top: -4px;
+}
+.adv-items a:nth-child(5)>img {
+	margin-top: -5px;
+}
+.adv-items a:nth-child(6)>img {
+	margin-top: -2px;
+	margin-left: 3px;
+}
+.adv-items a:nth-child(7)>img {
+	margin-top: -2px;
+}
+.adv-items a:nth-child(8)>img {
+	margin-top: -5px;
+	margin-left: 2px;
 }
 footer {
 	background: #213a4d;
@@ -778,6 +810,10 @@ ul.footer-menu li a {
 	text-decoration: none;
 	vertical-align: top;
 	letter-spacing: 0.6px;
+}
+ul.footer-menu li:last-of-type a {
+	letter-spacing: 0.1px;
+	padding-left: 4px;
 }
 ul.footer-menu li:hover a {
 	color:#52abcb;
